@@ -1,6 +1,51 @@
 // bower:scss
 // endbower
 
+//before after css
+#comparison {
+  border: 1px solid red;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+#comparison figure {
+  position: relative;
+  font-size: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+#divisor {
+  background-color: green;
+  z-index:2;
+  position: absolute;
+  width: 50%;
+  overflow: hidden;
+  bottom: 0;
+  height: 100%
+}
+
+#left-content {
+  background-color: blue;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  margin-left: 300px;
+}
+
+#right-content {
+  background-color: #ffff00;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  z-index: 0;
+  margin-left: 49%;
+}
+//----end before after css
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
