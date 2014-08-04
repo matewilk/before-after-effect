@@ -8,7 +8,10 @@
  *
  * Main module of the application.
  */
-angular.module('prototypeApp', ['ngRoute', 'angular-responsive', 'ngAnimate',
+angular.module('prototypeApp', ['ngRoute',
+    'mc.resizer',
+    'angular-responsive',
+    'ngAnimate',
     'ngCookies',
     'ngResource',
     'ngSanitize',

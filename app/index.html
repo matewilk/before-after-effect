@@ -12,6 +12,7 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <script src="http://code.jquery.com/jquery-2.0.3.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
     <!-- endbuild -->
   </head>
@@ -21,39 +22,28 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="container">
-        <div class="header">
-            <ul class="nav nav-pills pull-right">
-                <li class="active"><a ng-href="#">Home</a></li>
-                <li><a ng-href="#/about">About</a></li>
-                <li><a ng-href="#">Contact</a></li>
-            </ul>
-            <h3 class="text-muted">prototype</h3>
-        </div>
+    <div id="comparison">
+        <figure>
+            <div id="divisor">
+                <div id="left-content">Left</div>
+            </div>
+            <div id="right-content">
+                <div id="right-content-inner"></div>
+            </div>
 
-        <div ng-view=""></div>
 
-        <div class="footer">
-            <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-        </div>
+        </figure>
     </div>
 
-    <div>
-        <h3>Before / After</h3>
-
-        <div id="comparison">
-            <figure>
-                <div id="divisor">
-                    <div id="left-content">Left</div>
-                </div>
-                <div id="right-content">Right</div>
-            </figure>
-        </div>
-
-        <button id="left" onClick="click()">Left</button>
-        <button id="center">Center</button>
-        <button id="right">Right</button>
+    <div id="divisor-resizer"
+         resizer="vertical"
+         resizer-width="6"
+         resizer-left="#divisor">
     </div>
+
+    <!--<button id="left" onClick="click()">Left</button>-->
+    <!--<button id="center">Center</button>-->
+    <!--<button id="right">Right</button>-->
 
     <script type="text/javascript">
         var left = document.getElementById('left');
@@ -105,6 +95,7 @@
     <script src="bower_components/angular-responsive/src/responsive-directive.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
+    <script src="scripts/libs/resizer.js"></script>
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
